@@ -1,8 +1,13 @@
 attrs==19.3.0
+Click==7.0
 entrypoints==0.3
 flake8==3.7.9
 flake8-mypy==17.8.0
+Flask==1.1.1
 importlib-metadata==0.23
+itsdangerous==1.1.0
+Jinja2==2.10.3
+MarkupSafe==1.1.1
 mccabe==0.6.1
 more-itertools==7.2.0
 mypy==0.740
@@ -18,4 +23,5 @@ six==1.13.0
 typed-ast==1.4.0
 typing-extensions==3.7.4.1
 wcwidth==0.1.7
+Werkzeug==0.16.0
 zipp==0.6.0
