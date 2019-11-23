@@ -1,4 +1,4 @@
-from flask import make_response, escape
+from flask import escape
 
 
 def main(request):

@@ -1,0 +1,20 @@
+steps:
+  - name: gcr.io/cloud-builders/git
+    args: ['clone', 'https://github.com/jaspajjr/google-cloud-functions-http']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: Build
+    args: [ 'build',
+            '-t',
+            'gcr.io/$PROJECT_ID/http-functions:$SHORT_SHA',
+            '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: Run tests
+    args: [ 'run',
+            '-t',
+            'gcr.io/$PROJECT_ID/http-functions:$SHORT_SHA']
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['functions', 'deploy', 'yo-son', '[YOUR_FUNCTION_TRIGGER]', '--runtime', '[YOUR_RUNTIME]', '--entry-point', '[YOUR_FUNCTION_NAME_IN_CODE]']
+    dir: 'functions/autodeploy'
