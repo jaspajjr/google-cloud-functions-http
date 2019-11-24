@@ -12,8 +12,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     id: Run tests
     args: [ 'run',
-            '-t',
-            'gcr.io/$PROJECT_ID/http-functions:$SHORT_SHA']
+            'gcr.io/$PROJECT_ID/http-functions:$SHORT_SHA', '-t']
 
   - name: 'gcr.io/cloud-builders/gcloud'
     args: [
