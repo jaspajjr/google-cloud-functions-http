@@ -16,5 +16,13 @@ steps:
             'gcr.io/$PROJECT_ID/http-functions:$SHORT_SHA']
 
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['functions', 'deploy', 'yo-son', '[YOUR_FUNCTION_TRIGGER]', '--runtime', '[YOUR_RUNTIME]', '--entry-point', '[YOUR_FUNCTION_NAME_IN_CODE]']
+    args: [
+      'functions',
+      'deploy',
+      'yo-son',
+      '--trigger-http',
+      '--runtime',
+      'python37',
+      '--entry-point',
+      'main']
     dir: 'functions/autodeploy'
