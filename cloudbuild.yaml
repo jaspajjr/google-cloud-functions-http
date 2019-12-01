@@ -21,7 +21,6 @@ steps:
       'yo-son',
       '--trigger-http',
       '--runtime',
-      'python37',
-      '--entry-point',
-      'main']
+      'python37'
+      ]
     dir: 'functions/autodeploy'

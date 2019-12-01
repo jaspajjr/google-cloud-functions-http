@@ -17,4 +17,4 @@ def main(request):
         name = request_json['name']
     else:
         name = 'World'
-    return 'Hello {}!'.format(escape(name))
+    return 'Ahoyhoy: {}!'.format(escape(name))
